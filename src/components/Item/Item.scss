@@ -1,0 +1,31 @@
+.card{
+text-align: center;
+    width: 295px;
+      height: 400px;
+      border-radius: 8px;
+      box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin: 2rem;
+    //   text-align: center;
+      transition: all 0.25s;
+      display: grid;
+   
+    }
+    .card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+      }
+
+img{
+    width: 200px;
+    height: 200px;
+
+  margin-left: 2.2rem;
+}
+
+.contenedor{
+
+  display: flex;
+  margin-left:1rem ;
+  gap: 1rem;
+}

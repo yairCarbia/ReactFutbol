@@ -1,0 +1,26 @@
+.container{
+
+ 
+}
+
+.card{
+//     width: 1300px;
+//   height: 30px;
+  
+border-radius: 8px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 2rem;
+//   text-align: center;
+  transition: all 0.25s;
+}
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
