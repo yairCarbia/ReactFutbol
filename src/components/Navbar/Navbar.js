@@ -27,17 +27,18 @@ export const Navbar = () => {
 
                             <div className="container_menu ">
                                 <h1>Tienda de FUTBOL=TRUE!</h1>
-                                <nav class="container_menu_items   d-flex justify-content-between">
+                                <nav className="container_menu_items   d-flex justify-content-between">
                                     <Link to={"/"} className="btn" href="btn">Inicio</Link>
-                                    <Link to={"/nosotros"} className="btn" href="btn">Nosotros</Link>
-                                    <Link to={"/contacto"} className="btn" href="btn">Contacto</Link>
+                                    <Link to={"/categorias/botin"} className="btn" href="btn">Botines</Link>
+                                    <Link to={"/categorias/pelota"} className="btn" href="btn">Pelotas</Link>
                                 </nav>
 
                                 <div className=" d-flex">
                                     <img className="container_img" src={layout} />
                                     <div className=" d-flex">
                                         <Link to={"/tienda"} href="tienda" className="btn-nuevo">Reserva ahora</Link>
-                                        <a href="#" className="btn-nuevo">Conocenos</a>
+                                        <Link to={"/nosotros"} href="nosotros" className='btn-nuevo'>Conocenos</Link>
+                                        {/* <a href="#" className="btn-nuevo">Conocenos</a> */}
                                     </div>
 
                                 </div>

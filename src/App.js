@@ -21,14 +21,12 @@ function App() {
       <Navbar />
 
       <Routes>
-
+        <Route path='/' element={<ItemListContainer />} />
         <Route path='/tienda' element={<ItemListContainer />} />
         <Route path='/categorias/:categoryId' element={<ItemListContainer />} />
         <Route path='/item/:itemId' element={<ItemDetailContainer />} />
         <Route path='/nosotros' element={<Nosotros />} />
-        <Route path='/contacto' element={<Contacto />} />
-        <Route path='*' element={<Navigate to={"/"} />} />
-        {/* <Route path='*' element={ <Error404/> } /> */}
+        <Route path='/*' element={<ItemListContainer />} />
       </Routes>
 
       <Footer />
