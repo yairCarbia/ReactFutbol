@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css'
 import { Navbar } from './components/Navbar/Navbar'
+import Carrito from './components/cart/Carrito';
 import Nosotros from './components/Nosotros/Nosotros'
 import Contacto from './components/Contacto/Contacto'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
@@ -26,6 +27,7 @@ function App() {
         <Route path='/categorias/:categoryId' element={<ItemListContainer />} />
         <Route path='/item/:itemId' element={<ItemDetailContainer />} />
         <Route path='/nosotros' element={<Nosotros />} />
+        <Route path="/cart" element={<Carrito />} />
         <Route path='/*' element={<ItemListContainer />} />
       </Routes>
 
