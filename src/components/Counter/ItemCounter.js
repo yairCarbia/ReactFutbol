@@ -27,7 +27,7 @@ const ItemCount = ({ max, setContador, contador, handdleAgregar }) => {
                 <button className='btn btn-danger' onClick={resta}>-1</button>
             </div>
             <hr />
-            <Link to={"/cart"} onClick={handdleAgregar} className="btn btn-primary my-2">Agregar al Carrito</Link>
+            <Link to={"/cart"} href="cart" onClick={handdleAgregar} className="btn btn-primary my-2">Agregar al Carrito</Link>
 
         </div>
     )
