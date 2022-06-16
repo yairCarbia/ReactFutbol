@@ -4,6 +4,7 @@ import Carrito from '../cart/Carrito'
 import { Link } from 'react-router-dom'
 const ItemCount = ({ max, setContador, contador, handdleAgregar }) => {
 
+
     const suma = () => {
         contador < max && setContador(contador + 1);
     }
@@ -27,7 +28,7 @@ const ItemCount = ({ max, setContador, contador, handdleAgregar }) => {
                 <button className='btn btn-danger' onClick={resta}>-1</button>
             </div>
             <hr />
-            <Link to={"/cart"} href="cart" onClick={handdleAgregar} className="btn btn-primary my-2">Agregar al Carrito</Link>
+            <button href="cart" onClick={handdleAgregar} className="btn btn-primary my-2">Agregar al Carrito</button>
 
         </div>
     )
