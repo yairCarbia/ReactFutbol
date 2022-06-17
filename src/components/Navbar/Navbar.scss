@@ -1,6 +1,16 @@
+// header{
+// display: flex;
+// justify-content: space-between;
+// }
 .container{
 
 &_header{
+ .widget{
+font-size:3rem;
+margin-left: 1rem;
+color:#3c7209;
+text-decoration: none;
+ }
     // display: flex;
     &_div{
         // display: flex;

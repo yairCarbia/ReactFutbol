@@ -3,6 +3,7 @@ import logo from "../../img/campo-de-futbol.png"
 import layout from "../../img/undraw_goal_-0-v5v.svg"
 import { Link } from "react-router-dom"
 import carrito from "../../img/verificar.png"
+import CarWidget from '../CartWidget/CarWidget'
 export const Navbar = () => {
 
     return (
@@ -16,7 +17,8 @@ export const Navbar = () => {
                             <div className="container_header_logo d-flex justify-content-center ">
                                 <img src={logo} className="logo" />
                                 <h1 className="titulo">FUTBOL=TRUE!</h1>
-                                <img src={carrito} className="carrito" />
+                                {/* <img src={carrito} className="carrito" /> */}
+                                <CarWidget className="cart" />
                             </div>
                         </header>
                         <div className="container_header_div ">
