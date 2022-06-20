@@ -6,6 +6,15 @@ import "./CartWidget.css"
 const CarWidget = () => {
 
     const { carrito, totalCantidad } = useContext(CarContext)
+    if (carrito.length === 0) {
+        return (< Link to="/cart" className='widget' >
+            <BsCartCheckFill />
+
+        </Link >)
+
+    }
+
+
     return (
         <Link to="/cart" className='widget'>
             <BsCartCheckFill />

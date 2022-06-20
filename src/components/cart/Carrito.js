@@ -1,8 +1,21 @@
 import React, { useContext } from 'react'
 import { CarContext } from '../../context/CarContext'
 import { BsTrash2Fill } from "react-icons/bs"
+import { Link } from "react-router-dom"
 const Carrito = () => {
     const { carrito, totalidad, vaciarCarrito, eliminarItem } = useContext(CarContext)
+
+
+    if (carrito.length === 0) {
+        return (
+            <div className='container my-5'>
+                <h2>El carrito esta vacio!
+                </h2>
+                <Link to="/" className="btn btn-primary">Ir a comprar!</Link>
+            </div>
+
+        )
+    }
     return (
 
         <div>
