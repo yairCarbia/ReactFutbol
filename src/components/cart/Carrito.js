@@ -29,15 +29,15 @@ const Carrito = () => {
                         <img src={item.img} />
                         <p>Cantidad:{item.cantidad}</p>
                         <h4>Precio:{item.precio * item.cantidad}</h4>
-                        <button onClick={eliminarItem} className='btn btn-danger'> <BsTrash2Fill /> </button>
-                        <button onClick={() => eliminarItem(item.id)} className='btn btn-danger mb-5' > Vaciar carrito</button>
+                        <button onClick={() => eliminarItem(item.id)} className='btn btn-danger'> <BsTrash2Fill /> </button>
+
                         <hr />
                     </div>
                 ))
             }
 
             <h5>TOTAL:${totalidad()}</h5>
-
+            <button onClick={() => vaciarCarrito()} className='btn btn-danger mb-5' > Vaciar carrito</button>
         </div >
     )
 }

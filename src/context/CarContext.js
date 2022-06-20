@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
         return setCarrito([]);
     }
     const eliminarItem = (id) => {
-        return carrito.filter((prod) => prod.id !== id)
+        return setCarrito(carrito.filter((prod) => prod.id !== id))
     }
     return (
         //se crea el Carcontext y se le provee de toda la logica 
