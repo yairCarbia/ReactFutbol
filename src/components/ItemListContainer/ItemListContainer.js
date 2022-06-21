@@ -4,8 +4,8 @@ import { Spinner } from "react-bootstrap"
 import { pedirDatos } from "../../mock/pedirDatos"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
-
-
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../../firebase/config"
 export const ItemListContainer = () => {
 
     const [items, setItems] = useState([])
@@ -20,20 +20,27 @@ export const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        pedirDatos()
-            .then((resp) => {
-                if (!categoryId) {
-                    setItems(resp)
-                } else {
-                    setItems(resp.filter((item) => item.categoria === categoryId))
-                }
-            })
-            .catch((error) => {
-                console.log('ERROR', error)
+        //1ro armar la ref 
+        //la fn collection recibe 2 parametros
+        //1ero la ref a la base de datos y 2do que coleeccion consumir de la base 
+        const productos = collection(db, "productos");
+        const consulta = categoryId ? query(productos, where("categoria", "==", categoryId)) : productos
+        //2do llamar a firebase con la ref del 1er paso
+        getDocs(consulta)
+            .then((rta) => {
+                const prod = rta.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                })
+                setItems(prod);
+                console.log(prod);
             })
             .finally(() => {
                 setLoading(false)
             })
+
     }, [categoryId])
 
     return (
