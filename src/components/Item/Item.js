@@ -13,7 +13,7 @@ const Item = ({ item }) => {
             <p>{item.desc}</p>
             <h4>Precio: ${item.precio}</h4>
             <div className="contenedor "> <Link to={`/item/${item.id}`}>
-                <Button variant="outline-info" size="lg" className=" btn btn-primary my-5">Ver más</Button>
+                <button className="boton">Ver más</button>
 
             </Link>
             </div>

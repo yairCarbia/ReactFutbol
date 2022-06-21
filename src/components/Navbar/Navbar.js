@@ -1,60 +1,67 @@
 import './Navbar.scss'
-import logo from "../../img/campo-de-futbol.png"
-import layout from "../../img/undraw_goal_-0-v5v.svg"
+import logo from "../../img/cm.jpeg"
+import layout from "../../img/pexels-pragyan-bezbaruah-2629412.jpg"
 import { Link } from "react-router-dom"
-import carrito from "../../img/verificar.png"
+// import carrito from "../../img/verificar.png"
 import CarWidget from '../CartWidget/CarWidget'
 export const Navbar = () => {
 
     return (
         <>
-            <div className="container">
-                <div>
 
-                    <div className='container_header '>
-                        <header>
 
-                            <div className="container_header_logo d-flex justify-content-center ">
+
+
+            <header className='header'>
+                <div className='barra'>
+                    <div className="container_header_logo  ">
+                        {/* 
+                        <h1 className="titulo">Carbia Motors</h1> */}
+                        <img src={logo} className="logo" />
+                        {/* <img src={carrito} className="carrito" /> */}
+
+                    </div>
+                    <nav className="navegacion">
+                        <Link to={"/"} className="btn" href="btn">Inicio</Link>
+                        <Link to={"/categorias/enduro"} className="btn" href="btn">Enduro</Link>
+                        <Link to={"/categorias/deportivo"} className="btn" href="btn">Deportivas</Link>
+
+                        <Link to={"/categorias/varios"} className="btn" href="btn">Varios</Link>
+
+                        <CarWidget className="cart btn" />
+                    </nav></div>
+
+            </header>
+            {/* <div className="container_header_div ">
+                <div className="container_header_logo d-flex justify-content-center ">
                                 <img src={logo} className="logo" />
                                 <h1 className="titulo">FUTBOL=TRUE!</h1>
-                                {/* <img src={carrito} className="carrito" /> */}
-                                <CarWidget className="cart" />
                             </div>
-                        </header>
-                        <div className="container_header_div ">
-                            {/* <div className="container_header_logo d-flex justify-content-center ">
-                                <img src={logo} className="logo" />
-                                <h1 className="titulo">FUTBOL=TRUE!</h1>
-                            </div> */}
 
-                            <div className="container_menu ">
-                                <h1>Tienda de FUTBOL=TRUE!</h1>
-                                <nav className="container_menu_items   d-flex justify-content-between">
-                                    <Link to={"/"} className="btn" href="btn">Inicio</Link>
-                                    <Link to={"/categorias/botin"} className="btn" href="btn">Botines</Link>
-                                    <Link to={"/categorias/pelota"} className="btn" href="btn">Pelotas</Link>
-                                </nav>
-
-                                <div className=" d-flex">
-                                    <img className="container_img" src={layout} />
-                                    <div className=" d-flex">
-                                        <Link to={"/tienda"} href="tienda" className="btn-nuevo">Reserva ahora</Link>
-                                        <Link to={"/nosotros"} href="nosotros" className='btn-nuevo'>Conocenos</Link>
-                                        {/* <a href="#" className="btn-nuevo">Conocenos</a> */}
-                                    </div>
-
-                                </div>
+                <div className="container_menu ">
+                    <h1>Tienda de FUTBOL=TRUE!</h1>
 
 
-                            </div>
+                    <div className=" d-flex">
+                        <img className="container_img" src={layout} />
+                        <div className=" d-flex">
+                            <Link to={"/tienda"} href="tienda" className="btn-nuevo">Reserva ahora</Link>
+                            <Link to={"/nosotros"} href="nosotros" className='btn-nuevo'>Conocenos</Link>
+                            <a href="#" className="btn-nuevo">Conocenos</a>
                         </div>
 
                     </div>
 
+
                 </div>
+            </div> */}
 
 
-            </div>
+
+
+
+
+
 
             {/* <header className="header">
 

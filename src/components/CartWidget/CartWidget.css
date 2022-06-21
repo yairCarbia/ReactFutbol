@@ -1,4 +1,6 @@
-.cart {
+.cart:hover {
     margin-top: 1.5rem;
-    margin-left: 10rem
+    margin-left: 10rem;
+    border-radius: 10px;
+    color: black;
 }
