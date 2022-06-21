@@ -1,0 +1,19 @@
+.container2{
+background:linear-gradient(#3c7209,#31b489) ;
+width: 100%;
+height: 100vh;
+max-width: 1920px;
+margin: 1px auto;
+margin-bottom: 5rem;
+padding: 40px;
+border-radius: 10px;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+
+&_container_formulario{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+}
