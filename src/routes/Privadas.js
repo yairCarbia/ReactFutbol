@@ -11,6 +11,7 @@ import { ItemDetailContainer } from '../components/ItemDetailContainer/ItemDetai
 import { CarContext } from '../context/CarContext';
 import { useState } from 'react';
 import { useAuthContext } from '../context/AuthContext';
+import Checkout from '../components/Checkout/Checkout';
 const Privadas = () => {
     return (
         <>
@@ -20,6 +21,7 @@ const Privadas = () => {
                 <Route path='/' element={<ItemListContainer />} />
                 <Route path='/tienda' element={<ItemListContainer />} />
                 <Route path='/categorias/:categoryId' element={<ItemListContainer />} />
+                <Route path='/checkout' element={<Checkout />} />
                 <Route path='/item/:itemId' element={<ItemDetailContainer />} />
                 <Route path='/nosotros' element={<Nosotros />} />
                 <Route path="/cart" element={<Carrito />} />

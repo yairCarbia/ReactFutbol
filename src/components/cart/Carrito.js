@@ -17,29 +17,33 @@ const Carrito = () => {
         )
     }
     return (
+        <>
+            <div>
+                <h2>Tu compra</h2>
 
-        <div>
-            <h2>Tu compra</h2>
+                <hr />
+                {//para enviar a traves del evento onClick una fn con parametros el camino es a traves de una fn anonima...
+                    carrito.map((item) => (
+                        <div key={item.id}>
+                            <h3> {item.nombre}</h3>
+                            <img src={item.img} />
+                            <p>Cantidad:{item.cantidad}</p>
+                            <h4>Precio:{item.precio * item.cantidad}</h4>
+                            <button onClick={() => eliminarItem(item.id)} className='btn btn-danger'> <BsTrash2Fill /> </button>
 
-            <hr />
-            {//para enviar a traves del evento onClick una fn con parametros el camino es a traves de una fn anonima...
-                carrito.map((item) => (
-                    <div key={item.id}>
-                        <h3> {item.nombre}</h3>
-                        <img src={item.img} />
-                        <p>Cantidad:{item.cantidad}</p>
-                        <h4>Precio:{item.precio * item.cantidad}</h4>
-                        <button onClick={() => eliminarItem(item.id)} className='btn btn-danger'> <BsTrash2Fill /> </button>
+                            <hr />
+                        </div>
+                    ))
+                }
 
-                        <hr />
-                    </div>
-                ))
-            }
+                <h5>TOTAL:${totalidad()}</h5>
+                <button onClick={() => vaciarCarrito()} className='btn btn-danger mb-5' > Vaciar carrito</button>
 
-            <h5>TOTAL:${totalidad()}</h5>
-            <button onClick={() => vaciarCarrito()} className='btn btn-danger mb-5' > Vaciar carrito</button>
-        </div >
+            </div >
+            < Link to="/checkout" className='btn btn-danger '>Finalizar Compra</Link >
+        </>
     )
+
 }
 
 export default Carrito

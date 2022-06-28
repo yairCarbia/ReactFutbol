@@ -1,19 +1,34 @@
 .container2{
-background:linear-gradient(#3c7209,#31b489) ;
+background:linear-gradient(#000000,#232424) ;
 width: 100%;
 height: 100vh;
 max-width: 1920px;
-margin: 1px auto;
-margin-bottom: 5rem;
-padding: 40px;
-border-radius: 10px;
+margin: 0px auto;
+margin-bottom: 0rem;
+padding: 2rem;
+text-align: center;
+
 display: grid;
 grid-template-columns: repeat(3,1fr);
+.container_form    {
+   margin: 0 auto;
+    background:yellow;
+    width: 80%;
 
+height: 60vh;
+
+}
+.container_formulario2{
+    padding: 1rem;
+}
+.container_formulario{display: grid;
+    grid-template-columns: repeat(3,1fr);
+    }
+width: 100%;
+height: 100vh;
 &_container_formulario{
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
 
 }
 }
