@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import "./ItemCounter.scss"
-import Carrito from '../cart/Carrito'
-import { Link } from 'react-router-dom'
+
 const ItemCount = ({ max, setContador, contador, handdleAgregar }) => {
 
 
@@ -18,17 +17,18 @@ const ItemCount = ({ max, setContador, contador, handdleAgregar }) => {
 
 
     return (
-        <div>
+        <div className='d-flex cont'>
 
 
-            <h3>Cantidad:{contador}</h3>
-            <div className='flex'>
-                <button className='btn btn-success' onClick={suma}>+1</button>
-                <button className='btn btn-primary' onClick={reset}>Reset</button>
-                <button className='btn btn-danger' onClick={resta}>-1</button>
+            <h3 className="text-light my-4 ">Cantidad: <span className='color2'>{contador}</span></h3>
+            <div className='d-flex'>
+                <button className='boton1 text-light' onClick={suma}>+1</button>
+                <button className='boton1 text-light ms-1' onClick={reset}>Reset</button>
+                <button className='boton1 text-light ms-1' onClick={resta}>-1</button>
+                <button href="cart" onClick={handdleAgregar} className="boton1  text-light ms-5">Agregar al Carrito</button>
             </div>
-            <hr />
-            <button href="cart" onClick={handdleAgregar} className="btn btn-primary my-2">Agregar al Carrito</button>
+
+
 
         </div>
     )

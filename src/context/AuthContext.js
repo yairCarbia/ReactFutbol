@@ -17,8 +17,8 @@ export const AuthContextProvider = ({ children }) => {
         logIn: false,
         userId: null
     })
-    const login = (valor) => {
-        const { usuario, email, password } = valor
+    const login = (values) => {
+        const { usuario, email, password } = values
         const encontrar = users.find((user) => user.email === email)
 
         if (encontrar) {
@@ -28,12 +28,12 @@ export const AuthContextProvider = ({ children }) => {
                     userId: encontrar.email
                 })
             } else {
-                alert("Password incorrecto")
-
+                users.push(usuario, email, password)
+                setAuth({
+                    logIn: true,
+                    userId: encontrar.email
+                })
             }
-        } else {
-            alert("User no enctrado")
-
         }
     }
 

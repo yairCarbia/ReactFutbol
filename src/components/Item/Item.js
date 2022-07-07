@@ -7,13 +7,13 @@ import "./Item.scss"
 const Item = ({ item }) => {
 
     return (
-        <div className="card">
-            <h2>{item.nombre}</h2>
-            <img src={item.img} />
+        <div className="card bg-dark d-grid">
+            <h2 className="text-light">{item.nombre}</h2>
+            <img className="rounded-circle imagen" src={item.img} />
             <p>{item.desc}</p>
-            <h4>Precio: ${item.precio}</h4>
+            <h4 className="text-light">Precio: ${item.precio}</h4>
             <div className="contenedor "> <Link to={`/item/${item.id}`}>
-                <button className="boton">Ver más</button>
+                <button className="btn btn-dark btn-lg boton text-light">Mas informacion</button>
 
             </Link>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react'
 import { useAuthContext } from '../../context/AuthContext'
+
 import "./LoginScreen.scss"
 import { Formik } from 'formik'
 import * as Yup from "yup"
@@ -13,14 +13,13 @@ const schema = Yup.object().shape({
         .email("Formato de email erroneo,vuelve a intentar!"),
 
     password: Yup.string().required(),
-
+    confirmar: Yup.string().label("Confirmar contraseña").required().oneOf([Yup.ref("password"), null], "Las contraseñas deben coincidir")
 })
 
-const LoginScreen = () => {
-    const { login } = useAuthContext()
-    const [estado, setEstado] = useState(false);
 
-    const [valor, setValor] = useState({
+const LoginScreen2 = () => {
+    const { login } = useAuthContext()
+    const [value, setValor] = useState({
         usuario: "",
         email: "",
         password: ""
@@ -31,29 +30,17 @@ const LoginScreen = () => {
     //         [e.target.name]: e.target.value
     //     })
     // }
-
     const handdleSubmit = (values) => {
 
         login(values)
     }
-    useEffect(() => {
-
-        setEstado(true);
-
-    }, [estado])
-
-
-
-
     return (
-        <>
+        <div>
 
-            <div>
-
+            <div className='container2'>
                 <div className='container_form'>
-                    <h1>Login Carbia Motors</h1>
-                    <h2>Crea tu usuario</h2>
 
+                    <h1>Login Carbia Motors</h1>
                     <Formik
                         initialValues={{
                             nombre: "",
@@ -101,7 +88,17 @@ const LoginScreen = () => {
                                     {
                                         (formik.errors.password && <p className='alert alert-danger'>{formik.errors.password}</p>)
                                     }
-
+                                    <input
+                                        value={formik.values.confirmar}
+                                        name="confirmar"
+                                        onChange={formik.handleChange}
+                                        type={"text"}
+                                        placeholder={"Confirmar contraseña"}
+                                        className="form-control my-2"
+                                    />
+                                    {
+                                        (formik.errors.confirmar && <p className='alert alert-danger'>{formik.errors.confirmar}</p>)
+                                    }
                                     <button onSubmit={handdleSubmit} type={"submit"}>Enviar</button>
 
                                 </form>
@@ -112,18 +109,11 @@ const LoginScreen = () => {
                     </Formik>
 
 
-
                 </div>
+
             </div>
-
-
-
-
-
-        </>
-
-
+        </div>
     )
 }
 
-export default LoginScreen
+export default LoginScreen2

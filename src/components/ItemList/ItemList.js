@@ -6,9 +6,9 @@ const ItemList = ({ items }) => {
 
     return (
         <div>
-            <h2>Nuestro productos</h2>
-            <hr />
-            <div className="container">
+            <h2 className="bg-black mb-5 text-center text-light">Nuestro productos</h2>
+
+            <div className="container bg-black">
                 <div className="grid">
 
 

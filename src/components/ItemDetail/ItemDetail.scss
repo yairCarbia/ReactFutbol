@@ -1,5 +1,18 @@
-.container{
-  
+.finalizar{
+  height: 50px;
+  margin-left: 20rem !important;
+margin-top: 2rem !important;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.color2 {
+  color: yellow;
+  font-weight:bold;
+}
+.container2{
+  max-width: 500px !important;
+
     &_img2{
         width: 200px;
     height: 200px;
@@ -8,8 +21,8 @@
 }
 .card2{
         
-    width: 250px;
-      height: 500px;
+  
+      height: 500px !important;
       
     border-radius: 8px;
       box-shadow: 0 2px rgba(0, 0, 0, 0.1);

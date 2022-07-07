@@ -1,5 +1,37 @@
+.cont{
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-left: 5rem;
+}
 .flex{
 gap: 1rem;
     margin-bottom: 2rem;
     display: flex;
 }
+.container_img2{
+    border-radius: 100px;
+}
+.boton1{
+   
+        width: 78px;
+        height: 80px;
+        color: rgb(0, 0, 0);
+      background: transparent;
+        text-decoration: none;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding: .5rem;
+        transition-property: background-color;
+       border-radius: 5px;
+       box-sizing: border-box;
+       transition-duration:.5s;
+       border-color: yellow;
+    }
+      
+        .boton1:hover{
+          border-color: black;
+            background-color: yellow;
+          color: black !important;
+      
+      }

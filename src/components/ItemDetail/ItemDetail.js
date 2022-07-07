@@ -23,26 +23,30 @@ const ItemDetail = ({ item }) => {
     }
 
     return (
-        <div className="container card2 my-5">
-            <h2>{item.nombre}</h2>
-            <img className="container_img2" src={item.img} alt={item.nombre} />
-            <p>{item.desc}</p>
-            <h4>Precio: ${item.precio}</h4>
-            {
-                estaEnCarrito(item.id)
-                    ? <Link to="/cart" className="btn btn-primary">Finalizar compra</Link>
-                    : <ItemCounter
-                        max={item.stock}
-                        contador={cantidad}
-                        setContador={setCantidad}
-                        handdleAgregar={handdleAgregar}
+        <>
+            <h2 className="text-light text-center m-3">Has seleccionadado el producto, <spam className="color2">{item.nombre} !</spam> </h2>
 
-                    />
-            }
+            <h4 className="text-light text-center"> Su precio es de:<spam className="color2"> ${item.precio}</spam></h4>
+            <div className="d-flex">
+                <img className="container_img2 mb-3 " src={item.img} alt={item.nombre} />
 
-            {/* <button onClick={handleVolver}>VOLVER</button> */}
 
-        </div>
+                {
+                    estaEnCarrito(item.id)
+                        ? <Link to="/cart" className="boton finalizar text-center m-2">Finalizar compra</Link>
+                        : <ItemCounter
+                            max={item.stock}
+                            contador={cantidad}
+                            setContador={setCantidad}
+                            handdleAgregar={handdleAgregar}
+
+                        />
+                }
+
+                {/* <button onClick={handleVolver}>VOLVER</button> */}
+
+            </div></>
+
     )
 }
 

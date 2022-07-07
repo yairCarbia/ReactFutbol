@@ -44,7 +44,7 @@ export const ItemListContainer = () => {
     }, [categoryId])
 
     return (
-        <section className="container my-5">
+        <section className="container bg-black my-5">
 
             {
                 loading
