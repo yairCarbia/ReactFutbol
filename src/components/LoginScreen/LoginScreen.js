@@ -12,7 +12,7 @@ const schema = Yup.object().shape({
     email: Yup.string().required("El campo Email es invalido")
         .email("Formato de email erroneo,vuelve a intentar!"),
 
-    password: Yup.string().required(),
+    password: Yup.string().required("Campo requerido"),
 
 })
 
@@ -25,12 +25,7 @@ const LoginScreen = () => {
         email: "",
         password: ""
     })
-    // const handleInputChange = (e) => {
-    //     setValor({
-    //         ...valor,
-    //         [e.target.name]: e.target.value
-    //     })
-    // }
+
 
     const handdleSubmit = (values) => {
 
@@ -52,8 +47,7 @@ const LoginScreen = () => {
 
                 <div className='container_form'>
                     <h1>Login Carbia Motors</h1>
-                    <h2>Crea tu usuario</h2>
-
+                    <h2>Inicia sesion </h2>
                     <Formik
                         initialValues={{
                             nombre: "",

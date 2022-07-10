@@ -13,10 +13,9 @@ export const Navbar = () => {
             <header className='header'>
                 <div className='barra'>
                     <div className="container_header_logo  ">
-                        {/* 
-                        <h1 className="titulo">Carbia Motors</h1> */}
+
                         <img src={logo} className="logo" />
-                        {/* <img src={carrito} className="carrito" /> */}
+
 
                     </div>
                     <nav className="navegacion">

@@ -21,11 +21,11 @@ const ItemCount = ({ max, setContador, contador, handdleAgregar }) => {
 
 
             <h3 className="text-light my-4 ">Cantidad: <span className='color2'>{contador}</span></h3>
-            <div className='d-flex'>
+            <div className='d-flex botones'>
                 <button className='boton1 text-light' onClick={suma}>+1</button>
                 <button className='boton1 text-light ms-1' onClick={reset}>Reset</button>
                 <button className='boton1 text-light ms-1' onClick={resta}>-1</button>
-                <button href="cart" onClick={handdleAgregar} className="boton1  text-light ms-5">Agregar al Carrito</button>
+                <button href="cart" onClick={handdleAgregar} className="boton1  text-light ">Agregar al Carrito</button>
             </div>
 
 

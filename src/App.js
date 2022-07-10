@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css'
 import { Navbar } from './components/Navbar/Navbar'
-import Carrito from './components/cart/Carrito';
-import Nosotros from './components/Nosotros/Nosotros'
-import Contacto from './components/Contacto/Contacto'
+import Carrito from './components/Cart/Carrito';
+
+
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Footer from './components/Footer/Footer';

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar } from '../components/Navbar/Navbar'
-import Carrito from '../components/cart/Carrito';
-import Nosotros from '../components/Nosotros/Nosotros'
+import Carrito from '../components/Cart/Carrito';
+
 
 import { ItemListContainer } from '../components/ItemListContainer/ItemListContainer'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
@@ -23,7 +23,7 @@ const Privadas = () => {
                 <Route path='/categorias/:categoryId' element={<ItemListContainer />} />
                 <Route path='/checkout' element={<Checkout />} />
                 <Route path='/item/:itemId' element={<ItemDetailContainer />} />
-                <Route path='/nosotros' element={<Nosotros />} />
+
                 <Route path="/cart" element={<Carrito />} />
 
                 <Route path='/*' element={<ItemListContainer />} />

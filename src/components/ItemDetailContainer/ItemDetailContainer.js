@@ -11,15 +11,12 @@ export const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
-    console.log(itemId)
-    console.log(item)
 
     useEffect(() => {
         setLoading(true)
-        //1ero hacer la ref , se pasa db,nombre de la coleccion y el id del doc.
+
         const docRef = doc(db, "productos", itemId)
 
-        //llamar a firestone con getDoc 
         getDoc(docRef)
             .then((doc) => {
                 setItem({ id: doc.id, ...doc.data() })

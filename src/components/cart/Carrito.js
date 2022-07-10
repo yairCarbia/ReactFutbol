@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import "../cart/Carrito.scss"
+import "./Carrito.scss"
 import { useEffect } from 'react'
 import { CarContext } from '../../context/CarContext'
 import { BsTrash2Fill } from "react-icons/bs"
@@ -41,7 +41,7 @@ const Carrito = () => {
 
                 <hr />
 
-                {//para enviar a traves del evento onClick una fn con parametros el camino es a traves de una fn anonima...
+                {
                     carrito.map((item) => (
                         <SwipeableList>
                             <SwipeableListItem
@@ -49,7 +49,7 @@ const Carrito = () => {
 
                             >
                                 <div className=' container_item' key={item.id}>
-                                    <img src={item.img} />
+                                    <img className='container_img' src={item.img} />
                                     <div> <h3 className='color2'> {item.nombre}</h3>
 
                                         <p>Cantidad:<span className='color2'> {item.cantidad}</span></p>
@@ -60,10 +60,10 @@ const Carrito = () => {
                         </SwipeableList>
                     ))
                 }
-
+                <p>Nota : deslizar hacia la derecha para eliminar el producto del carrito!</p>
                 <h5>TOTAL:<span className='color2'>$ {totalidad()}</span></h5>
                 <button onClick={() => vaciarCarrito()} className='boton2' > Vaciar carrito</button>
-                <Link to="/checkout" className='boton2'>Finalizar Compra</Link >
+                <button className='boton2'><Link to="/checkout">Finalizar Compra</Link ></button>
             </div >
 
 

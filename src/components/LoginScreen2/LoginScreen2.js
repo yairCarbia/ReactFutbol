@@ -24,12 +24,7 @@ const LoginScreen2 = () => {
         email: "",
         password: ""
     })
-    // const handleInputChange = (e) => {
-    //     setValor({
-    //         ...valor,
-    //         [e.target.name]: e.target.value
-    //     })
-    // }
+
     const handdleSubmit = (values) => {
 
         login(values)
