@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ReactFutbol/static/css/main.e8570e7f.css",
+    "main.js": "/ReactFutbol/static/js/main.6f228875.js",
+    "static/js/787.19622cb1.chunk.js": "/ReactFutbol/static/js/787.19622cb1.chunk.js",
+    "static/media/pexels-pragyan-bezbaruah-2629412.jpg": "/ReactFutbol/static/media/pexels-pragyan-bezbaruah-2629412.7170c3e80453d9dc6322.jpg",
+    "static/media/cm.jpeg": "/ReactFutbol/static/media/cm.203c4d40067a5978843f.jpeg",
+    "index.html": "/ReactFutbol/index.html",
+    "main.e8570e7f.css.map": "/ReactFutbol/static/css/main.e8570e7f.css.map",
+    "main.6f228875.js.map": "/ReactFutbol/static/js/main.6f228875.js.map",
+    "787.19622cb1.chunk.js.map": "/ReactFutbol/static/js/787.19622cb1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8570e7f.css",
+    "static/js/main.6f228875.js"
+  ]
+}
