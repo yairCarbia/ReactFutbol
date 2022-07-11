@@ -1,14 +1,11 @@
 import React from 'react'
-import { useContext, useState } from 'react'
-import { CarContext } from '../../context/CarContext'
-import { Navigate } from 'react-router-dom'
-import { getOverlayDirection } from 'react-bootstrap/esm/helpers'
-import { collection, addDoc, doc, updateDoc, getDoc, getDocs, writeBatch, query, where, documentId } from 'firebase/firestore'
-import { db } from '../../firebase/config'
+
+
+
 import { Formik } from 'formik'
 import * as Yup from "yup"
 import "yup-phone"
-import { async } from '@firebase/util'
+
 const Formik2 = ({ initialValues, handdleSubmit, validationSchema }) => {
     const schema = Yup.object().shape({
         nombre: Yup.string().required("El Campo nombre es invalido")

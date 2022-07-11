@@ -14,7 +14,7 @@ export const Navbar = () => {
                 <div className='barra'>
                     <div className="container_header_logo  ">
 
-                        <img src={logo} className="logo" />
+                        <img src={logo} className="logo" alt='imagen logo' />
 
 
                     </div>

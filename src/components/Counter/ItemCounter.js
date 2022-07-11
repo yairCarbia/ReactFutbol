@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./ItemCounter.scss"
 
 const ItemCount = ({ max, setContador, contador, handdleAgregar }) => {

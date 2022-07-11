@@ -1,13 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { CarContext } from '../../context/CarContext'
 import { Navigate } from 'react-router-dom'
-import { getOverlayDirection } from 'react-bootstrap/esm/helpers'
-import { collection, addDoc, doc, updateDoc, getDoc, getDocs, writeBatch, query, where, documentId } from 'firebase/firestore'
+
+import { collection, addDoc, getDocs, writeBatch, query, where, documentId } from 'firebase/firestore'
 import { db } from '../../firebase/config'
-import { Formik } from 'formik'
-import * as Yup from "yup"
+
 import "yup-phone"
-import { async } from '@firebase/util'
+
 import Formik2 from '../Formik/Formik2'
 
 
@@ -17,14 +16,14 @@ const Checkout = () => {
 
 
 
-    const { carrito, totalidad, vaciarCarrito, eliminarItem } = useContext(CarContext)
+    const { carrito, totalidad, vaciarCarrito } = useContext(CarContext)
     const [orderId, setOrder] = useState(null)
-    const [value, setValue] = useState({
-        nombre: "",
-        email: "",
-        telefono: "",
-        direcion: ""
-    })
+    // const [value, setValue] = useState({
+    //     nombre: "",
+    //     email: "",
+    //     telefono: "",
+    //     direcion: ""
+    // })
 
     const handdleSubmit = async (value) => {
 

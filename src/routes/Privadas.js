@@ -4,7 +4,7 @@ import Carrito from '../components/Cart/Carrito';
 
 
 import { ItemListContainer } from '../components/ItemListContainer/ItemListContainer'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Footer from '../components/Footer/Footer';
 
 import { ItemDetailContainer } from '../components/ItemDetailContainer/ItemDetailContainer';

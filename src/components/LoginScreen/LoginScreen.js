@@ -20,11 +20,11 @@ const LoginScreen = () => {
     const { login } = useAuthContext()
     const [estado, setEstado] = useState(false);
 
-    const [valor, setValor] = useState({
-        usuario: "",
-        email: "",
-        password: ""
-    })
+    // const [valor, setValor] = useState({
+    //     usuario: "",
+    //     email: "",
+    //     password: ""
+    // })
 
 
     const handdleSubmit = (values) => {

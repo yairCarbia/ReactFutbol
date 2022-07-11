@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import "./Carrito.scss"
-import { useEffect } from 'react'
+
 import { CarContext } from '../../context/CarContext'
-import { BsTrash2Fill } from "react-icons/bs"
+
 import { Link } from "react-router-dom"
 import {
     LeadingActions,
@@ -49,7 +49,7 @@ const Carrito = () => {
 
                             >
                                 <div className=' container_item' key={item.id}>
-                                    <img className='container_img' src={item.img} />
+                                    <img className='container_img' src={item.img} alt="imagen" />
                                     <div> <h3 className='color2'> {item.nombre}</h3>
 
                                         <p>Cantidad:<span className='color2'> {item.cantidad}</span></p>
